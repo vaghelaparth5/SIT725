@@ -1,0 +1,15 @@
+button {
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+div{
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px red solid;
+    width: fit-content;
+    font-size: x-large;
+}
