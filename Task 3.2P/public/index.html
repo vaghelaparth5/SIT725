@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parth's Pizzaria</title>
+
+    <!-- Importing the materialize CSS library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Using the css file that I have created -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="yellow darken-2">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo black-text">🍕 Parth's Pizzaria</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="https://vaghelaparth05.netlify.app/" class="black-text">About</a></li>
+          <li><a href="#contact-modal" class="modal-trigger black-text">Contact</a></li>
+          <li><a href="https://www.linkedin.com/in/vaghelaparth05/" class="black-text">LinkedIn</a></li>
+          <li><a href="https://github.com/vaghelaparth5" class="black-text">Github</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Banner and title section -->
+    <section class="hero center-align" style="background-color: #fff8dc; padding: 4rem 1rem;">
+      <h3>Welcome to Parth's Pizzaria</h3>
+      <p>Delicious, cheesy, and baked to perfection.</p>
+      <a href="#menu" class="btn-large yellow darken-3 black-text">Order Now</a>
+    </section>
+
+    <!-- Pizzas List -->
+    <div class="container" id="menu">
+      <h4 class="center-align">Our Favorites</h4>
+      <div class="row">
+        <!-- Pizza Cards (unchanged) -->
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://safrescobaldistatic.blob.core.windows.net/media/2022/11/PIZZA-MARGHERITA.jpg" alt="Margherita Pizza" />
+              <span class="card-title">Margherita</span>
+            </div>
+            <div class="card-content">
+              <p>Classic delight with fresh mozzarella and basil.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://www.jennycancook.com/wp-content/uploads/2013/02/PeppPizza_600.jpg" alt="Pepperoni Pizza" />
+              <span class="card-title">Pepperoni</span>
+            </div>
+            <div class="card-content">
+              <p>Favorite, with pepperoni and melty cheese.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://www.killingthyme.net/wp-content/uploads/2020/09/veggie-deluxe-pizza-5.jpg" alt="Veggie Pizza" />
+              <span class="card-title">Veggie Blast</span>
+            </div>
+            <div class="card-content">
+              <p>Loaded with fresh veggies and a hint of herbs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="section yellow lighten-5" id="about">
+      <div class="container">
+        <h4 class="center-align">About Us</h4>
+        <p class="flow-text center-align">
+          At Parth's Pizzaria, I believe in serving love and joy through my handmade pizzas. Fresh ingredients, fast delivery, and a warm smile—every time.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Modal Button -->
+    <div class="container section center-align">
+      <a class="btn yellow darken-3 black-text modal-trigger" href="#contact-modal">Contact Us</a>
+    </div>
+
+    <!-- Contact Modal Structure -->
+    <div id="contact-modal" class="modal">
+      <div class="modal-content">
+        <h4>Contact Us</h4>
+        <form class="col s12" action="/contact" method="POST">
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <input id="name" type="text" name="name" class="validate" />
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <input id="email" type="email" name="email" class="validate" />
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="message" name="message" class="materialize-textarea"></textarea>
+              <label for="message">Message</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn yellow darken-3 black-text" type="submit">Send</button>
+            <a href="#!" class="modal-close btn-flat">Close</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer yellow darken-2">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center-align">
+            <h5 class="black-text">Parth's Pizzaria</h5>
+            <p class="grey-text text-darken-2">Serving smiles with every slice 🍕</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container center-align black-text">
+          Liscensed by 2025 Parth's Pizzaria.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Initially my modal wasn't working properly. I added the below line which is the js file of materialize. It worked perfectly after that. It was missing all the clicks and materialize functions.  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var modals = document.querySelectorAll('.modal');
+        M.Modal.init(modals);
+      });
+    </script>
+  </body>
+</html>
