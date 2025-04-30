@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIT725 Task 7.2P Calculator</title>
+</head>
+<body>
+    <h2>Calculator with 4 operations</h2>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <select id="operation">
+        <option value="add">Addition : (+)</option>
+        <option value="subtract">Subtraction (-)</option>
+        <option value="multiply">Multiplication (*)</option>
+        <option value="divide">Division (/)</option>
+    </select>
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="calculate()">Calculate</button>
+
+    <p>Result: <span id="result">N/A</span></p>
+
+    <h3>Random Number from Server:</h3>
+    <p><span id="random-number">N/A</span></p>
+
+    <h3>Calculation Broadcast:</h3>
+    <div id="broadcast"></div>
+
+    <!-- Load socket.io client library -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
